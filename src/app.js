@@ -38,8 +38,8 @@ app.post("/payments", async (req,res) => {
                 }
             ],
             mode: 'payment',
-            success_url: `${YOUR_DOMAIN}/success`,
-            cancel_url: `${YOUR_DOMAIN}/cancel`,
+            success_url: `http://localhost:3000/success`,
+            cancel_url: `http://localhost:3000/cancel`,
           });
 
           console.log(session.payment_status);
