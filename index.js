@@ -18,9 +18,7 @@ app.use(express.static(staticPath));
 const img = path.join(__dirname, "/asset/whatsappPrivacy.jpg");
 
 
-// app.get('/', (req,res) => {
-//     res.send("rental backend");
-// });
+
 
 app.post("/payments", async (req,res) => {
     try {
@@ -67,6 +65,17 @@ app.post("/payments", async (req,res) => {
 app.get('*',(req,res) => {
     res.sendFile(path.join(__dirname,"../","client","index.html"));
 })
+
+
+if(process.env.NODE_ENV == 'production') {
+    app.get('/',(req,res) => {
+        res.sendFile(path.resolve(__dirname,'client','index.html'))
+    })
+} else {
+    app.get('/', (req,res) => {
+        res.send("rental backend");
+    });
+}
 
 
 app.listen(port,() => {
