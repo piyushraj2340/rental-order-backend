@@ -18,9 +18,9 @@ app.use(express.static(staticPath));
 const img = path.join(__dirname, "/asset/whatsappPrivacy.jpg");
 
 
-app.get('/', (req,res) => {
-    res.send("rental backend");
-});
+// app.get('/', (req,res) => {
+//     res.send("rental backend");
+// });
 
 app.post("/payments", async (req,res) => {
     try {
