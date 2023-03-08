@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 
 // require('./db/db');
+
+const port = process.env.port || 8000;
 const app = express();
 
 const YOUR_DOMAIN = 'http://localhost:8000';
@@ -67,6 +69,6 @@ app.get('*',(req,res) => {
 })
 
 
-app.listen(8000,() => {
+app.listen(port,() => {
     console.log("listening to port 8000");
 })
