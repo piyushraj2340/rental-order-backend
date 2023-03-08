@@ -2,7 +2,7 @@ const stripe = require('stripe')('sk_test_51Mh3nrSG2OBM7gGqYliQervsXmac5hUFnGL7Q
 const express = require('express');
 const path = require('path');
 
-require('./db/db');
+// require('./db/db');
 const app = express();
 
 const YOUR_DOMAIN = 'http://localhost:8000';
@@ -10,7 +10,8 @@ const YOUR_DOMAIN = 'http://localhost:8000';
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use(express.static('public'));
+const staticPath = path.join(__dirname, "../client");
+app.use(express.static(staticPath));
 
 const img = path.join(__dirname, "/asset/whatsappPrivacy.jpg");
 
@@ -38,8 +39,8 @@ app.post("/payments", async (req,res) => {
                 }
             ],
             mode: 'payment',
-            success_url: `http://localhost:3000/success`,
-            cancel_url: `http://localhost:3000/cancel`,
+            success_url: `${YOUR_DOMAIN}/success`,
+            cancel_url: `${YOUR_DOMAIN}/cancel`,
           });
 
           console.log(session.payment_status);
@@ -61,12 +62,9 @@ app.post("/payments", async (req,res) => {
     }
 })
 
-// app.get("/success", (req,res)=> {
-//     res.send("Success")
-// })
-// app.get("/cancel", (req,res)=> {
-//     res.send("cancel")
-// })
+app.get('*',(req,res) => {
+    res.sendFile(path.join(__dirname,"../","client","index.html"));
+})
 
 
 app.listen(8000,() => {

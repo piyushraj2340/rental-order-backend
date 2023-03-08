@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.833ccfa1.css",
+    "main.js": "/static/js/main.8e20fe0a.js",
+    "static/media/e-bike-002.png": "/static/media/e-bike-002.0ebd567f4e2ada1fd03d.png",
+    "static/media/e-bike-001.png": "/static/media/e-bike-001.3783c1853a21f8fea932.png",
+    "static/media/header-image.png": "/static/media/header-image.ef94f0a1b2f8636f0cc1.png",
+    "static/media/404.gif": "/static/media/404.7725c6cd341380a10a1c.gif",
+    "static/media/car-001.png": "/static/media/car-001.75ec139f76621dd1da63.png",
+    "static/media/car-004.png": "/static/media/car-004.fe51482b705b0555e124.png",
+    "static/media/car-003.png": "/static/media/car-003.714930745c0624e1189c.png",
+    "static/media/car-002.png": "/static/media/car-002.bef7dbb2d882d226d7fc.png",
+    "static/media/e-car-001.png": "/static/media/e-car-001.56bef8d2dc108a243e2f.png",
+    "static/media/bike-004.png": "/static/media/bike-004.f0f59d4eb5827e6386c5.png",
+    "static/media/bike-001.png": "/static/media/bike-001.2513aa1ed5a51182065c.png",
+    "static/media/bike-002.png": "/static/media/bike-002.c47a6d532ae8459d4133.png",
+    "static/media/bike-003.png": "/static/media/bike-003.d963ee7cbc435a99a2b7.png",
+    "static/media/e-car-002.png": "/static/media/e-car-002.0a613856b737446d5d7b.png",
+    "index.html": "/index.html",
+    "main.833ccfa1.css.map": "/static/css/main.833ccfa1.css.map",
+    "main.8e20fe0a.js.map": "/static/js/main.8e20fe0a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.833ccfa1.css",
+    "static/js/main.8e20fe0a.js"
+  ]
+}
